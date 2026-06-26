@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- HEADER / NAVBAR ---------- */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 5;
+    border-bottom: 3px solid #c9c8c8;
+}
+
+.navbar {
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.nav-left,
+.nav-menu,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-left .nav-menu {
+    list-style: none;
+}
+
+.nav-left .nav-menu li a {
+    padding: 8px 12px;
+    font-size: 1rem;
+}
+
+.nav-left .nav-menu li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+/* ---------- HERO SECTION ---------- */
+
+.hero-section {
+    min-height: 100vh;
+    background: #fff8e1;
+    padding-top: 120px;
+}
+
+.hero-section .section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero-details h1 {
+    font-size: 3rem;
+    max-width: 100%;
+}
+
+.hero-details p {
+    font-size: 1.2rem;
+    max-width: 100%;
+}
+
+.hero-image img {
+    width: 500px;
+    height: auto;
+}
+
+/* ---------- ABOUT ---------- */
+
+.about-us {
+    width: 100%;
+    background-color: #fff;
+    padding: 50px 20px;
+}
+
+.about-us .section-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.about-us .about-details {
+    max-width: 50%;
+}
+
+.about-us .about-image img {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* ---------- MENU ---------- */
+
+.menu-section {
+    background-color: #5e1f12;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.menu-section .menu-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu-section .menu-list .menu-item {
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+}
+
+/* ---------- THEME ---------- */
+
+.theme-section {
+    background-color: #fff;
+}
+
+.theme-section .menu-list .menu-item {
+    overflow: hidden;
+    border-radius: 8px;
+    height: 300px;
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact-us {
+    background-color: rgb(242, 215, 181);
+    padding: 60px 20px;
+}
+
+.contact-us .section-content {
+    display: flex;
+    max-width: 1300px;
+    margin: auto;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+}
+
+.contact-form {
+    width: 50%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+    background-color: #5e1f12;
+    color: white;
+    padding: 20px;
+}
+
+.footer .section-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* ========================= */
+/* 📱 RESPONSIVE DESIGN */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-left,
+    .nav-right {
+        justify-content: center;
+    }
+
+    /* HERO */
+    .hero-section .section-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 280px;
+    }
+
+    .hero-details h1 {
+        font-size: 2rem;
+    }
+
+    /* ABOUT */
+    .about-us .section-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-us .about-details {
+        max-width: 100%;
+    }
+
+    .about-us .about-image img {
+        width: 280px;
+        height: 280px;
+    }
+
+    /* MENU */
+    .menu-section .menu-list .menu-item {
+        width: 45%;
+    }
+
+    /* CONTACT */
+    .contact-us .section-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-details,
+    .contact-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero-details h1 {
+        font-size: 1.5rem;
+    }
+
+    .menu-section .menu-list .menu-item {
+        width: 100%;
+    }
+
+    .about-us .about-image img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero-image img {
+        width: 220px;
+    }
+}
